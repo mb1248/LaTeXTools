@@ -49,13 +49,7 @@ class View_pdfCommand(sublime_plugin.WindowCommand):
 			# sublime_text "%f":%l
 			viewercmd = ["SumatraPDF", "-reuse-instance"]		
 		elif s == "Linux":
-			# the required scripts are in the 'evince' subdir
-			script_path = os.path.join(sublime.packages_path(), 'LaTeXTools', 'evince')
-			ev_sync_exec = os.path.join(script_path, 'evince_sync') # so we get inverse search
-			# Get python binary if set in preferences:
-			py_binary = prefs_lin["python2"] or 'python'
-			sb_binary = prefs_lin["sublime"] or 'sublime-text'
-			viewercmd = ['sh', ev_sync_exec, py_binary, sb_binary]
+      viewercmd = ["okular", "--unique"]
 		else:
 			sublime.error_message("Platform as yet unsupported. Sorry!")
 			return	
