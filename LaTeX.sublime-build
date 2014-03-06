@@ -34,9 +34,9 @@
 		// backward/forward search, forcing compilation (e.g. even if no bib file is found)
 		// and producing pdf rather than dvi output
 		"cmd": ["latexmk", "-cd",
-				"-e", "\\$pdflatex = '%E -interaction=nonstopmode -synctex=1 %S %O'",
+				"-e", "\\$pdflatex = '%E -interaction=nonstopmode -shell-escape -recorder -synctex=1 %S %O'",
 				//"-silent",
-				"-f", "-pdf"],
+				"-f", "-pdf", "-recorder"],
 
 		// Paths to TeX binaries; needed as GUI apps do not inherit
 		// the profile. MUST EXPLICITLY PRE/APPEND $PATH!
@@ -119,8 +119,8 @@
 		// backward/forward search, forcing compilation (e.g. even if no bib file is found)
 		// and producing pdf rather than dvi output
 		"cmd": ["latexmk", "-cd",
-				"-e", "\\$pdflatex='%E -interaction=nonstopmode -shell-escape -synctex=1 %S %O'",
-				"-f", "-pdf"],
+				"-e", "\\$pdflatex='%E -interaction=nonstopmode -shell-escape -recorder -synctex=1 %S %O'",
+				"-f", "-pdf", "-recorder"],
 
 		// Paths to TeX binaries; needed as GUI apps do not inherit
 		// the profile. MUST EXPLICITLY PRE/APPEND $PATH!
