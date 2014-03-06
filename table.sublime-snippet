@@ -4,16 +4,12 @@
 	\caption{${2:caption here}}
 	\label{${3:tab:tablename}}
 	\centering
-	\begin{tabular}{${4:l|cc}}
-	\hline
-
-	\hline
-	\textbf{${5:column 1}} & \textbf{${6:column 2}} & \textbf{${7:column 3}} \\\\
-	\hline
+	\begin{tabular}{${4:lcc}}
+	\toprule
+	${5:column 1} & ${6:column 2} & ${7:column 3} \\\\
+	\midrule
 		 & & \\\\
-	\hline
-
-	\hline
+	\bottomrule
 	\end{tabular}
 \end{table}
 ]]></content>
