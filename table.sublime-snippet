@@ -1,8 +1,7 @@
 <snippet>
 	<content><![CDATA[
 \begin{table}[${1:tb}]
-	\caption{${2:caption here}}
-	\label{${3:tab:tablename}}
+	\caption{${2:caption here}}\label{${3:tab:tablename}}
 	\centering
 	\begin{tabular}{${4:lcc}}
 	\toprule
