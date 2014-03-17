@@ -1,5 +1,5 @@
 # ST2/ST3 compat
-from __future__ import print_function 
+from __future__ import print_function
 import sublime
 if sublime.version() < '3000':
     # we are on ST2 and Python 2.X
@@ -158,7 +158,7 @@ def get_cite_completions(view, point, autocompleting=False):
         # Replace cite_blah with \cite{blah
         pre_snippet = "\cite" + fancy_cite + "{"
         # The "latex_tools_replace" command is defined in latex_ref_cite_completions.py
-        view.run_command("latex_tools_replace", {"a": point-len(expr), "b": point, "replacement": pre_snippet + prefix})        
+        view.run_command("latex_tools_replace", {"a": point-len(expr), "b": point, "replacement": pre_snippet + prefix})
         # save prefix begin and endpoints points
         new_point_a = point - len(expr) + len(pre_snippet)
         new_point_b = new_point_a + len(prefix)
@@ -245,10 +245,10 @@ def get_cite_completions(view, point, autocompleting=False):
         years = []
         journals = []
         #
-        entry = {   "keyword": "", 
+        entry = {   "keyword": "",
                     "title": "",
-                    "author": "", 
-                    "year": "", 
+                    "author": "",
+                    "year": "",
                     "editor": "",
                     "journal": "",
                     "eprint": "" }
@@ -258,6 +258,8 @@ def get_cite_completions(view, point, autocompleting=False):
             if line == "" or line[0] == '%':
                 continue
             if line.lower()[0:8] == "@comment":
+                continue
+            if line.lower()[0:9] == "@preamble":
                 continue
             if line.lower()[0:7] == "@string":
                 continue
@@ -344,7 +346,7 @@ def get_cite_completions(view, point, autocompleting=False):
 # Based on html_completions.py
 # see also latex_ref_completions.py
 #
-# It expands citations; activated by 
+# It expands citations; activated by
 # cite<tab>
 # citep<tab> and friends
 #
@@ -352,7 +354,7 @@ def get_cite_completions(view, point, autocompleting=False):
 #
 # cite_sec
 #
-# to select all citation keywords starting with "sec". 
+# to select all citation keywords starting with "sec".
 #
 # There is only one problem: if you have a keyword "sec:intro", for instance,
 # doing "cite_intro:" will find it correctly, but when you insert it, this will be done
