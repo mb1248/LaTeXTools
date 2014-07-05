@@ -46,6 +46,9 @@
 			"-e", "\\$pdflatex='%E -interaction=nonstopmode -shell-escape -recorder -synctex=1 %S %O'",
 			"-f", "-pdf", "-recorder", "-g"],
           "name": "Run"
+        },
+        { "cmd": ["pdflatex","-interaction=nonstopmode", "-shell-escape", "-recorder", "-synctex=1"],
+          "name": "Fast"
         }
     ]
 }
