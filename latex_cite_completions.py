@@ -39,7 +39,7 @@ def match(rex, str):
 # included bibliography tags in the document and extract
 # the absolute filepaths of the bib files
 def find_bib_files(rootdir, src, bibfiles):
-    if src[-4:].lower() != ".tex":
+    if src[-4:].lower() not in [".tex", ".ltx"]:
         src = src + ".tex"
 
     file_path = os.path.normpath(os.path.join(rootdir,src))
@@ -183,6 +183,7 @@ def get_cite_completions(view, point, autocompleting=False):
     print ("TEX root: " + repr(root))
     bib_files = []
     find_bib_files(os.path.dirname(root), root, bib_files)
+    find_bib_files(os.path.dirname(root), re.sub("tex$", "ltx",root), bib_files)
     # remove duplicate bib files
     bib_files = list(set(bib_files))
     print ("Bib files found: ")
