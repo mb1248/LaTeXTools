@@ -7,12 +7,13 @@
                 { "trigger": "b", "contents": "\\beta" },
                 { "trigger": "g", "contents": "\\gamma" },
                 { "trigger": "d", "contents": "\\delta" },
-                { "trigger": "delta", "contents": "partial" },
-                //{ "trigger": "partial", "contents": "delta" },  # can't have trigger as it conflicts with p -> \pi
-		{ "trigger": "e", "contents": "\\epsilon" },
-		{ "trigger": "epsilon", "contents": "varepsilon" }, 
-                /* toggle the two! */
-		{ "trigger": "varepsilon", "contents": "epsilon" },
+                { "trigger": "\\delta", "contents": "\\partial" },
+                { "trigger": "partial", "contents": "delta" }, // # can't have trigger as it conflicts with p -> \pi
+
+                { "trigger": "e", "contents": "\\epsilon" },
+		{ "trigger": "\\epsilon", "contents": "\\varepsilon" },
+		{ "trigger": "\\varepsilon", "contents": "\\epsilon" },
+
 		{ "trigger": "z", "contents": "\\zeta"},
 		{ "trigger": "h", "contents": "\\eta" },
                 { "trigger": "q", "contents": "\\theta" },
@@ -28,9 +29,9 @@
                 { "trigger": "r", "contents": "\\rho" },
                 { "trigger": "s", "contents": "\\sigma" },
                 { "trigger": "t", "contents": "\\tau" },
-                { "trigger": "u", "contents": "\\upsilon" },        
+                { "trigger": "u", "contents": "\\upsilon" },
                 { "trigger": "f", "contents": "\\phi" },
-                { "trigger": "\\phi", "contents": "\\varphi" }, 
+                { "trigger": "\\phi", "contents": "\\varphi" },
                 { "trigger": "\\varphi", "contents": "\\phi" },
                 { "trigger": "c", "contents": "\\chi" },
                 { "trigger": "y", "contents": "\\psi" },
@@ -53,8 +54,8 @@
                 { "trigger": "sm", "contents": "\\setminus" },
                 { "trigger": "ld", "contents": "\\ldots" },
                 { "trigger": "cd", "contents": "\\cdot" },
-                { "trigger": "cdot", "contents": "cdots" },
-                { "trigger": "cdots", "contents": "cdot"},
+                { "trigger": "\\cdot", "contents": "\\cdots" },
+                { "trigger": "\\cdots", "contents": "\\cdot"},
 
                 { "trigger": "la", "contents": "\\langle"},
                 { "trigger": "ra", "contents": "\\rangle"},
@@ -78,10 +79,10 @@
                 { "trigger": "qqd", "contents": "\\qquad"},
 
 		{ "trigger": "pr", "contents": "\\prod"},
-		{ "trigger": "prod", "contents": "prec"},
-		{ "trigger": "prec", "contents": "preceq"},
-		{ "trigger": "preceq", "contents": "preccurlyeq"},
-		{ "trigger": "preccurlyeq", "contents": "prod"},
+		{ "trigger": "\\prod", "contents": "\\prec"},
+		{ "trigger": "\\prec", "contents": "\\preceq"},
+		{ "trigger": "\\preceq", "contents": "\\preccurlyeq"},
+		{ "trigger": "\\preccurlyeq", "contents": "\\prod"},
 
 		{ "trigger": "lar", "contents": "\\leftarrow"},
 		{ "trigger": "leftarrow", "contents": "longleftarrow"},
@@ -99,7 +100,7 @@
 		{ "trigger": "Lr", "contents": "\\Leftrightarrow"},
 		{ "trigger": "iff", "contents": "\\Leftrightarrow"},
 		{ "trigger": "Leftrightarrow", "contents": "Longleftrightarrow"},
-		{ "trigger": "Longleftrightarrow", "contents": "Leftrightarrow"}, 
+		{ "trigger": "Longleftrightarrow", "contents": "Leftrightarrow"},
                 { "trigger": "up", "contents": "\\uparrow"},
 		{ "trigger": "do", "contents": "\\downarrow"},
 
@@ -118,7 +119,11 @@
                 { "trigger": "fra", "contents": "\\frac{$1}{$2}$0"},
                 { "trigger": "stack", "contents": "\\stackrel{$1}{$2}$0"},
 
-                { "trigger": "sp", "contents": "\\begin{split}\n$0\n\\end{split}\n"}
+                { "trigger": "sp", "contents": "\\begin{split}\n$0\n\\end{split}\n"},
+
+                { "trigger": "pa", "contents": "\\phi_\\alpha"},
+                { "trigger": "pb", "contents": "\\phi_\\beta"},
+                { "trigger": "pl", "contents": "\\phi_\\ell"},
 
         ]
 }
