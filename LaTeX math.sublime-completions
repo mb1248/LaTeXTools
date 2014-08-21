@@ -125,5 +125,7 @@
                 { "trigger": "pb", "contents": "\\phi_\\beta"},
                 { "trigger": "pl", "contents": "\\phi_\\ell"},
 
+                { "trigger": "pd", "contents": "\\pdiff{$1}{$2}$0"},
+                { "trigger": "dpd", "contents": "\\dpdiff{$1}{$2}$0"},
         ]
 }
