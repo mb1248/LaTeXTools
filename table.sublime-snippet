@@ -10,7 +10,7 @@
 		 & & \\\\
 	\bottomrule
 	\end{tabular}
-\end{table}
+\end{table}%
 ]]></content>
 	<tabTrigger>btable</tabTrigger>
 	<scope>text.tex.latex</scope>
