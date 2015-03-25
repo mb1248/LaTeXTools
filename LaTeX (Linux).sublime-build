@@ -48,7 +48,7 @@
       "name": "Run"
     },
     { "cmd": ["pdflatex","-interaction=nonstopmode", "-shell-escape", "-recorder", "-synctex=1"],
-      "name": "Fast"
+      "name": "fast"
     },
     { "cmd": ["pdflatex","-ini", "-interaction=nonstopmode", "-recorder", "-jobname=main", "&pdflatex", "main.ltx\\dump"],
       "name": "main.fmt"
